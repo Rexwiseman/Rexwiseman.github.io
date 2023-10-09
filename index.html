@@ -19,7 +19,7 @@
             color: white;
             margin: 0;
             padding: 0;
-            overflow-x: hidden;
+            overflow-x: visible;
             transition: background-color 0.3s;
             display: flex;
             flex-direction: column;
@@ -214,10 +214,133 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
+form {
+        backdrop-filter: blur(5px);
+        border: 2px solid darkred;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: rgba(0, 0, 0, 0.6); 
+        transition: all 0.5s;
+    }
+    #contact
+      body {
+            font-family: 'Gothic A1', sans-serif;
+            background: linear-gradient(45deg, black, darkred);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
 
+        form {
+            backdrop-filter: blur(5px);
+            border: 2px solid darkred;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6); 
+            transition: all 0.5s;
+        }
+
+        form:hover {
+            box-shadow: 0 0 15px darkred;
+        }
+
+        input[type="text"], 
+        input[type="email"], 
+        textarea, 
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid darkred;
+            background: transparent;
+            border-radius: 5px;
+            transition: all 0.4s;
+            color: white;
+        }
+
+        input[type="text"]:focus, 
+        input[type="email"]:focus, 
+        textarea:focus {
+            outline: none;
+            border-color: white;
+        }
+
+        input[type="submit"] {
+            background-color: darkred;
+            color: black;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: transparent;
+            border-color: darkred;
+            color: darkred;
+    }
+     .menu-btn {
+    position: relative; /* or another value */
+    z-index: 2;
+}
+
+.navbar {
+    position: relative; /* or another value */
+    z-index: 1;
+}
+.navbar {
+    position: fixed;  /* Ensures the navbar stays in view even when scrolling */
+    top: 0;           /* Position it at the very top */
+    left: 0;          /* Position it at the very left */
+    width: 50%;      /* Cover the full width */
+    height: 100vh;    /* Cover the full viewport height */
+    z-index: 1;       /* Ensure it's under the close button */
+}
+#social 
+body {
+      font-family: 'Gothic A1', sans-serif;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .social-media {
+            backdrop-filter: blur(5px);
+            border: 2px solid darkred;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(0, 0, 0, 0.6);
+            transition: all 0.5s;
+        }
+
+        .social-media:hover {
+            box-shadow: 0 0 15px darkred;
+        }
+
+        .social-media a {
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 10px;
+            border: 2px solid darkred;
+            background: transparent;
+            border-radius: 5px;
+            transition: all 0.4s;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-media a:hover {
+            background-color: darkred;
+            color: black;
+        }
     </style>
 </head>
-
 <body>
     <div class="menu-btn" onclick="toggleMenu()">
         <div></div>
@@ -244,23 +367,20 @@
             <h1>BURNT OUT</h1>
         </section>
         <section id="contact">
-    <h1>Contact Burnt Out</h1>
-    <a href="mailto:rexwiseman62@gmail.com" class="social-link" target="_blank">
-        <img src="https://static-00.iconduck.com/assets.00/gmail-icon-509x512-ikquhn8l.png" alt="Gmail Icon" class="social-icon">
-    </a>
+          <h1>CONTACT BURNT OUT</h1>
+    <form action="https://formspree.io/f/mbjvqrlo" method="POST">
+        <input type="text" name="name" placeholder="Your Name">
+        <input type="email" name="_replyto" placeholder="Your Email">
+        <textarea name="message" placeholder="Your message"></textarea>
+        <input type="submit" value="Send">
+    </form>
 </section>
         <section id="social">
     <h1>BURNT OUT'S SOCIALS</h1>
-        <a href="https://www.instagram.com/bburntout/" class="social-link" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/2048px-Instagram_logo_2016.svg.png" alt="Instagram Icon" class="social-icon">
-            @bburntout
-    <a href="https://www.tiktok.com/@bburntout" class="social-link" target="_blank">
-        <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/450/small/tiktok-icon-free-png.png" alt="TikTok Icon" class="social-icon">
-        @bburntout
-    </a>
-</p>
-        </a>
-    </p>
+        <div class="social-media">
+        <a href="https://www.instagram.com/bburntout/" target="_blank">Intsagram</a>
+        <a href="https://www.tiktok.com/@bburntout/" target="_blank">Tiktok</a>
+    </div>
         </section>
         <section id="store">
             <h1>Store</h1>
