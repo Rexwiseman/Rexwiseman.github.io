@@ -207,12 +207,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: black;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
     color: red;
     padding: 300px;
     width: 300px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 10;
+    border: 2px solid darkred;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6); 
 }
 form {
         backdrop-filter: blur(5px);
